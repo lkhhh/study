@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
         console.log(chunk);
         body.push(chunk);
       });
-
+console('test')
       req.on('end', () => {
         const bodyStr = Buffer.concat(body).toString();
         const course = JSON.parse(bodyStr);
