@@ -1,2 +1,2 @@
 # studyproject
-Node.js 연습용 입니다
+Node.js / GitHub 연습용입니다
