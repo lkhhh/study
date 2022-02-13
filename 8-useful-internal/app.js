@@ -2,10 +2,6 @@ import express from 'express';
 
 const app = express();
 
-// express.json -> REST API, body parse
-// express.urlencoded -> HTML form
-// express.static
-
 app.use(express.json());
 app.post('/posts', (req, res) => {
   console.log(req.body);
