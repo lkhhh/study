@@ -1,18 +1,24 @@
 class Stack{
     constructor(){
-        this.s=[];
+        this._size=0;
+        this.head=null;
     }
     size(){
-        return this.s.length;
+        return this._size;
     }
-    push(obj){
-        this.s.push(obj);
+    push(item){
+        const node={item,next:this.head};
+        this.head=node;
+        this._size++;
     }
     pop(){
-        if(this.s.length===0){
+        if(this.head===null){
             throw new Error('Stack is empty');
         }
-        return this.s.pop();
+        const node=this.head;
+        this.head=node.next;
+        this._size--;
+        return node.item;
     }
 }
 
